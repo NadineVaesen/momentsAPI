@@ -21,7 +21,8 @@ namespace SchoolMomentAPI.Builders
             String firstName = "Student" + AddNumberToName.ToString();
             String lastName = "LastName";
             AddNumberToName++;
-            Student student = new Student(id, studentNumber, firstName, lastName);
+            String password = studentNumber + "@pxl";
+            Student student = new Student(id, studentNumber, firstName, lastName, password);
             return student;
         }
         public static String CreateStudentNumber()

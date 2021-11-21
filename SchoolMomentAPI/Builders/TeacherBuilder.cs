@@ -16,11 +16,12 @@ namespace SchoolMomentAPI.Builders
         {
             int id = TeacherId;
             TeacherId++;
-            String studentNumber = CreateTeacherNumber();
+            String teacherNumber = CreateTeacherNumber();
             String firstName = "Teacher" + AddNumberToName.ToString();
             String lastName = "LastName";
             AddNumberToName++;
-            Teacher teacher = new Teacher(id, studentNumber, firstName, lastName);
+            String password = teacherNumber + "@pxl";
+            Teacher teacher = new Teacher(id, teacherNumber, firstName, lastName, password);
             return teacher;
         }
 
