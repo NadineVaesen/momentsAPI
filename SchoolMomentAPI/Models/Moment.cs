@@ -13,24 +13,25 @@ namespace SchoolMomentAPI.Models
         public DateTime DateTime { get; set; }
         public int Duration { get; set; }
         //duration in hours
-        public Teacher Teacher { get; set; }
         public List<Student> RequestedStudents { get; set; }
         public List<Student> AttendedStudents { get; set; }
+        public int Id { get; }
 
         public Moment()
         {
         }
 
-        public Moment(int momentId, string name, Category category, DateTime dateTime, int duration, Teacher teacher, List<Student> requestedStudents, List<Student> attendedStudents)
+        public Moment(int momentId, string name, Category category, DateTime dateTime, int duration, List<Student> requestedStudents, List<Student> attendedStudents)
         {
             MomentId = momentId;
             Name = name;
             Category = category;
             DateTime = dateTime;
             Duration = duration;
-            Teacher = teacher;
             RequestedStudents = requestedStudents;
             AttendedStudents = attendedStudents;
         }
+
+      
     }
 }

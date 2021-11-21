@@ -24,30 +24,31 @@ namespace SchoolMomentAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Student>().Property(x => x.StudentNumber).IsRequired().HasMaxLength(10).IsUnicode();
+            modelBuilder.Entity<Student>().Property(x => x.StudentNumber).IsRequired().HasMaxLength(8).IsUnicode();
             modelBuilder.Entity<Teacher>().Property(x => x.TeacherNumber).IsRequired().HasMaxLength(10).IsUnicode();
             modelBuilder.Entity<Moment>().Property(x => x.Category).HasConversion(x => (int)x, x => (Category)x);
-            
+
             //seeding data
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    modelBuilder.Entity<Student>().HasData(
-            //        StudentBuilder.CreateStudent()
-            //    );
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                modelBuilder.Entity<Student>().HasData(
+                    StudentBuilder.CreateStudent()
+                );
+            }
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    modelBuilder.Entity<Teacher>().HasData(
-            //        TeacherBuilder.Createteacher()
-            //    );
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                modelBuilder.Entity<Teacher>().HasData(
+                    TeacherBuilder.Createteacher()
+                );
+            }
 
-            ////for (int i = 0; i < 10; i++)
-            ////{
-            //    modelBuilder.Entity<Moment>().HasData(
-            //        );
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                modelBuilder.Entity<Moment>().HasData(
+                    MomentBuilder.CreateMoment()
+                );
+            }
         }
         public void EnsureIsMigrated()
         {

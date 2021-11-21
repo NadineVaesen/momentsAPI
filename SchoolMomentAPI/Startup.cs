@@ -30,7 +30,7 @@ namespace SchoolMomentAPI
             services.AddControllers();
             services.AddDbContext<SchoolContext>(options =>
             {
-                string connectionString = Configuration.GetConnectionString("LocalConnection");
+                string connectionString = Configuration.GetConnectionString("SqlConnection");
                 options.UseSqlServer(connectionString);
                 options.EnableSensitiveDataLogging();
             });

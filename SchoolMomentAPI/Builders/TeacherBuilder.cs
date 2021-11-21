@@ -9,7 +9,7 @@ namespace SchoolMomentAPI.Builders
     public static class TeacherBuilder
     {
         private static int TeacherId = 1;
-        private static int StartTeacherNumber = 0000000000;
+        private static int StartTeacherNumber = 1000000000;
         private static int AddNumberToName = 0;
 
         public static Teacher Createteacher()

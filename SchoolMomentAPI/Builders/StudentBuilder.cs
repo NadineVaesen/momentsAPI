@@ -10,7 +10,7 @@ namespace SchoolMomentAPI.Builders
     {
 
         private static int StudentId = 1;
-        private static int StartStudentNumber = 0000000000;
+        private static int StartStudentNumber = 10000000;
         private static int AddNumberToName = 0;
 
         public static Student CreateStudent()
