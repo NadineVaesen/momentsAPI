@@ -15,8 +15,7 @@ namespace SchoolMomentAPI.Models
         //duration in hours
         public List<Student> RequestedStudents { get; set; }
         public List<Student> AttendedStudents { get; set; }
-        public int Id { get; }
-
+        
         public Moment()
         {
         }
